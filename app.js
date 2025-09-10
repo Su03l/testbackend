@@ -287,3 +287,13 @@ const items = [1, [2, [3, [4]]]];
 const newItems = _.flattenDeep(items);
 
 console.log(newItems);
+
+const courses = [
+  { name: "course1", price: 100 },
+  { name: "course2", price: 200 },
+  { name: "course3", price: 300 },
+];
+
+const cheapCourses = _.filter(courses, (course) => course.price <= 200);
+
+console.log(cheapCourses);
