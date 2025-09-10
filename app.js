@@ -297,3 +297,21 @@ const courses = [
 const cheapCourses = _.filter(courses, (course) => course.price <= 200);
 
 console.log(cheapCourses);
+
+const user = {
+  name: "Ali",
+  address: {
+    street: "123 Main St",
+    city: "Cairo",
+    country: {
+      name: "Egypt",
+      code: "EG",
+    },
+  },
+};
+
+console.log(_.get(user, "address.country.name", "Unknown"));
+console.log(_.get(user, "address.zipcode", "No Zipcode"));
+
+const updatedUser = _.set(user, "address.country.name", "KSA");
+console.log(updatedUser);
