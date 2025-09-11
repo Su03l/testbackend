@@ -151,3 +151,4 @@ const users: User[] = [
 ];
 
 console.log("\nUsers:", users);
+

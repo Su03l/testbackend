@@ -280,11 +280,72 @@
 //   console.log(`📖 API Docs available at http://localhost:${PORT}/docs`);
 // });
 
-const _ = require("lodash");
+// const _ = require("lodash");
+
+// const items = [1, [2, [3, [4]]]];
+
+// const newItems = _.flattenDeep(items);
+
+// console.log(newItems);
+
+// const courses = [
+//   { name: "course1", price: 100 },
+//   { name: "course2", price: 200 },
+//   { name: "course3", price: 300 },
+// ];
+
+// const cheapCourses = _.filter(courses, (course) => course.price <= 200);
+
+// console.log(cheapCourses);
+
+// const user = {
+//   name: "Ali",
+//   address: {
+//     street: "123 Main St",
+//     city: "Cairo",
+//     country: {
+//       name: "Egypt",
+//       code: "EG",
+//     },
+//   },
+// };
+
+// console.log(_.get(user, "address.country.name", "Unknown"));
+// console.log(_.get(user, "address.zipcode", "No Zipcode"));
+
+// const updatedUser = _.set(user, "address.country.name", "KSA");
+// console.log(updatedUser);
+
+// const express = require("express");
+
+// const app = express();
+
+// app.use(express.json());
+// const port = 3000;
+
+// app.get("/", (req, res) => {
+//   res.send("Welcome to the API");
+// });
+
+// app.get("/home", (req, res) => {
+//   res.send("Home Page");
+// });
+// app.get("/users", (req, res) => {
+//   res.json([
+//     { id: 1, name: "Ali" },
+//     { id: 2, name: "Sara" },
+//   ]);
+// });
+
+// app.listen(port, () => {
+//   console.log(`server work on http://localhost:${port}`);
+// });
+
+const lodash = require("lodash");
 
 const items = [1, [2, [3, [4]]]];
 
-const newItems = _.flattenDeep(items);
+const newItems = lodash.flattenDeep(items);
 
 console.log(newItems);
 
@@ -293,25 +354,4 @@ const courses = [
   { name: "course2", price: 200 },
   { name: "course3", price: 300 },
 ];
-
-const cheapCourses = _.filter(courses, (course) => course.price <= 200);
-
-console.log(cheapCourses);
-
-const user = {
-  name: "Ali",
-  address: {
-    street: "123 Main St",
-    city: "Cairo",
-    country: {
-      name: "Egypt",
-      code: "EG",
-    },
-  },
-};
-
-console.log(_.get(user, "address.country.name", "Unknown"));
-console.log(_.get(user, "address.zipcode", "No Zipcode"));
-
-const updatedUser = _.set(user, "address.country.name", "KSA");
-console.log(updatedUser);
+console.log(courses);
